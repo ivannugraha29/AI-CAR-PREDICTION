@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Grafik Depresiasi Harga</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f4f6;
+      margin: 0;
+      padding: 30px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #00b14f;
+      margin-bottom: 10px;
+    }
+
+    .btn-back {
+      margin-bottom: 30px;
+    }
+
+    .btn-back a {
+      text-decoration: none;
+      background-color: #00b14f;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .btn-back a:hover {
+      background-color: #009d45;
+    }
+
+    .grafik-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .grafik-container img {
+      max-width: 90%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Grafik Depresiasi Harga Mobil Bekas</h2>
+
+  <div class="btn-back">
+    <a href="/">← Kembali ke Form</a>
+  </div>
+
+  <div class="grafik-container">
+    <img src="{{ grafik_url }}" alt="Grafik Depresiasi">
+  </div>
+
+</body>
+</html>

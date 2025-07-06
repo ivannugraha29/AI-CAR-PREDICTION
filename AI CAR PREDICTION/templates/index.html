@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Prediksi Harga Mobil</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <div class="container">
+ 
+    <a href="/grafik" style="
+    display: inline-block;
+    background-color: #00b14f;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+  ">
+    Lihat Grafik Depresiasi Harga →
+  </a>
+  
+    
+
+    <h2>Prediksi Harga Mobil Bekas</h2>
+
+    <form action="/predict" method="post">
+      Usia Mobil (0-20 tahun): <input type="number" name="usia" required><br>
+      Merek Mobil (contoh: Toyota): <input type="text" name="brand" required><br>
+      <label for="transmisi">Transmisi:</label>
+<select name="transmisi" required>
+  <option value="Manual">Manual</option>
+  <option value="Automatic">Automatic</option>
+</select>
+
+      <input type="submit" value="Prediksi">
+    </form>
+
+    {% if pred %}
+      <h3>{{ pred }}</h3>
+    {% endif %}
+  </div>
+
+  
+</body>
+</html>
